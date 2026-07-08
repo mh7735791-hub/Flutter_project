@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:newapp/product_screen.dart';
+import 'package:newapp/my_screen.dart';
 
 void main(){
   runApp(
-    MaterialApp(
-      home: ProductScreen(),
-    )
-  );
+    MaterialApp(home: MyScreen()),);
 }
