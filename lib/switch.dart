@@ -13,21 +13,37 @@ class _SwitchScreenState extends State<SwitchScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Switch"),centerTitle: true,),
-      body: Center(child: Column(
+      appBar: AppBar(title: Text("Switch"),
+        centerTitle: true,backgroundColor: Colors.lightBlue),
+      body:Column(
         children: [
-          Switch(
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10,),
+            child: SwitchListTile(
+              title: Text("Power On/Off",style: TextStyle(fontSize: 20),),
+              subtitle: Text("Switch botton click"),
               value: switchValue,
-              onChanged: (value){
-                log("$value");
-                switchValue = value;
-                setState(() {});
-
-              }
+                onChanged: (value) {
+                  switchValue = value;
+                  setState(() {});
+                },
+            ),
           ),
-        ],
+
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10,),
+        child: SwitchListTile(
+          title: Text("Dark Mode On/Off",style: TextStyle(fontSize: 20),),
+          subtitle: Text("Display black/light mode setting"),
+          value: switchValue,
+          onChanged: (value) {
+            switchValue = value;
+            setState(() {});
+          },
+        ),
       ),
-      ),
+    ],
+    ),
     );
   }
 }
