@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 class SwitchScreen extends StatefulWidget {
   const SwitchScreen({super.key});
